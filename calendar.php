@@ -5,7 +5,7 @@ date_default_timezone_set("America/Montreal");
  * Set the date
  */
 $date = strtotime(date("Y-m-d"));
-$date = strtotime(date("2016-01-01"));
+#$date = strtotime(date("2016-01-01"));
 
 $day = date('d', $date);
 $month = date('m', $date);
@@ -31,7 +31,7 @@ $calendar = array();
 $calendar['week_days'] = $week_days;
 #print_r($calendar);
 ?>
-<link rel="stylesheet" type="text/css" href="stylesheets/calendar.css">
+<link rel="stylesheet" type="text/css" href="css/calendar.css">
 <h2><?php echo $month_name, ' ', $year ?></h2>
 <table class='calendar'>
 	<tr class="week-names">
