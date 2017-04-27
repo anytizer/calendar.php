@@ -1,0 +1,83 @@
+$week-name: #FF0000;
+$blank: #EEEEEE;
+$today: yellow;
+$today-hover: blue;
+$normal-day: lime;
+$normal-day-hover: $blank;
+$holidays: #ccffdd;
+$holidays-hover: #e6e6ff;
+
+*
+{
+	margin: 0;
+	padding: 0;
+	border: none;
+	outline: none;
+}
+
+table.calendar
+{
+	border: 1px solid $week-name;
+	font-family: verdana;
+	font-size: 16px;
+	color: #000000;
+	cursor: pointer;
+
+	tr
+	{
+		&.week-names
+		{
+			background-color: $week-name;
+			text-transform: capitalize;
+		}
+		
+		&.new-week { }
+		
+		td
+		{
+			padding: 15px;
+			&.blank
+			{
+				background-color: $blank;
+			}
+			&.day
+			{
+				&:hover
+				{
+					background-color: $normal-day-hover;
+				}
+
+				&.normal-day
+				{
+					/**
+					 * General days
+					 */
+					background-color: $normal-day;
+				}
+
+				&.today
+				{ 
+					background-color: $today;
+					&:hover
+					{
+						background-color: $today-hover;
+					}
+				}
+			}
+		}
+	}
+}
+
+/**
+ * Overwrite
+ */
+.sat, .sun
+{
+	color: red;
+	background-color: $holidays!important;
+	
+	&:hover
+	{
+		background-color: $holidays-hover!important;
+	}
+}

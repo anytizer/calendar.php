@@ -4,8 +4,8 @@ date_default_timezone_set("America/Montreal");
 /**
  * Set the date
  */
-$date = strtotime(date("Y-m-d"));
-#$date = strtotime(date("2016-01-01"));
+$date = strtotime(date("Y-m-d")); // today
+#$date = strtotime(date("2016-01-05")); // or, specific day
 
 $day = date('d', $date);
 $month = date('m', $date);
